@@ -70,7 +70,7 @@ app.controller('PlaylistsCtrl', function($scope, $http) {
            $scope.error = err;
   });
 
-  $http.get(url: 'http://hechoennl.gob.mx/services/getCategorias2').then(function(resp) {
+  $http.get('http://hechoennl.gob.mx/services/getCategorias2').then(function(resp) {
           console.log("1 "+ resp);
           $scope.hnl = resp;
   }, function(err) {
