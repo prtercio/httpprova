@@ -51,9 +51,9 @@ app.controller('PlaylistsCtrl', function($scope, $http) {
     { title: 'Cowbell', id: 6 }
   ];
 
-  var url = 'https://xbl.io/api/v1/account'; //'http://hechoennl.gob.mx/services/getCategorias2';
+  //var url = 'https://xbl.io/api/v1/account'; //'http://hechoennl.gob.mx/services/getCategorias2';
   $http({
-    url:url,
+    url:'https://jsonplaceholder.typicode.com/posts/1',
     method: 'GET',
     headers: {
                 'Access-Control-Allow-Origin': '*',                
@@ -69,14 +69,7 @@ app.controller('PlaylistsCtrl', function($scope, $http) {
            console.log(err.data);
            $scope.error = err;
   });
-
-  $http.get('http://hechoennl.gob.mx/services/getCategorias2').then(function(resp) {
-          console.log("1 "+ resp);
-          $scope.hnl = resp;
-  }, function(err) {
-              $scope.error =err;
-              $scope.errorhnl = err;
-  });
+ 
 
 
   /*
