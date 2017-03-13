@@ -1,17 +1,33 @@
 <ion-view view-title="Playlists">
   <ion-content>
+  	<form class="list" ng-submit="buscrXuid(gamertag)">
+
+      
+        <div class="list list-inset">
+          <label class="item item-input light-color">
+            <input type="text" placeholder="Introduce el nick name" ng-model="gamertag">
+          </label>
+  		<button class="button button-block button-positive" type="submit">Buscar</button>
+  		</div>
+  	</form>
     <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
+      <ion-item ng-repeat="playlist in respuesta.data">
+        {{playlist.id}} - {{playlist.Gamertag}}
       </ion-item>
     </ion-list>
     <br />
-    RESPUESTA: {{respuesta}}
+    <textarea>{{respuesta}}</textarea>
     <br />
     ERROR: {{error}}
      <br />
     RESPUESTAHNL: {{hnl}}
     <br />
     ERRORHNL: {{errorhnl}}
+    <form class="list" ng-submit="irHttp()">
+      
+        <div class="list list-inset">
+         	<button class="button button-block button-positive" type="submit">Presence</button>
+  		</div>
+  	</form>
   </ion-content>
 </ion-view>

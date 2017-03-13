@@ -1,0 +1,26 @@
+{
+  "xuid": 2533274906763963,
+  "state": "Online",
+  "devices": [
+    {
+      "type": "XboxOne",
+      "titles": [
+        {
+          "id": 714681658,
+          "name": "Inicio",
+          "placement": "Background",
+          "state": "Active",
+          "lastModified": "2017-03-13T21:32:16.0852772Z"
+        },
+        {
+          "id": 442736763,
+          "name": "Twitch",
+          "placement": "Full",
+          "state": "Active",
+          "lastModified": "2017-03-13T21:32:16.0852772Z"
+        }
+      ]
+    }
+  ],
+  "cloaked": true
+}

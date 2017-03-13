@@ -1,0 +1,28 @@
+{
+  "xuid": 2533275028767498,
+  "state": "Online",
+  "devices": [
+    {
+      "type": "XboxOne",
+      "titles": [
+        {
+          "id": 69094388,
+          "activity": {
+            "richPresence": "Jugando FIFA 17 Temporadas 1-3 REA - BAR, 2.º t."
+          },
+          "name": "EA SPORTS™ FIFA 17",
+          "placement": "Full",
+          "state": "Active",
+          "lastModified": "2017-03-13T22:11:56.8759317Z"
+        },
+        {
+          "id": 714681658,
+          "name": "Inicio",
+          "placement": "Background",
+          "state": "Active",
+          "lastModified": "2017-03-13T22:08:50.4789354Z"
+        }
+      ]
+    }
+  ]
+}
