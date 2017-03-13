@@ -69,6 +69,16 @@ app.controller('PlaylistsCtrl', function($scope, $http) {
            console.log(err.data);
            $scope.error = err;
   });
+
+  $http.get(url: 'http://hechoennl.gob.mx/services/getCategorias2').then(function(resp) {
+          console.log("1 "+ resp);
+          $scope.hnl = resp;
+  }, function(err) {
+              $scope.error =err;
+              $scope.errorhnl = err;
+  });
+
+
   /*
 $http.jsonp({
     //url:'https://xbl.io/api/v1/Benbaodan',
