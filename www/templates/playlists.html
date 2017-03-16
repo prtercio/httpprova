@@ -1,5 +1,7 @@
 <ion-view view-title="Playlists">
   <ion-content>
+
+  <!--
   	<form class="list" ng-submit="buscrXuid(gamertag)">
 
       
@@ -16,18 +18,32 @@
       </ion-item>
     </ion-list>
     <br />
-    <textarea>{{respuesta}}</textarea>
-    <br />
-    ERROR: {{error}}
-     <br />
-    RESPUESTAHNL: {{hnl}}
-    <br />
-    ERRORHNL: {{errorhnl}}
-    <form class="list" ng-submit="irHttp()">
-      
-        <div class="list list-inset">
-         	<button class="button button-block button-positive" type="submit">Presence</button>
-  		</div>
-  	</form>
+    -->
+
+
+    <p>Presione o botao para recuperar o resultado do jogo:</p>
+    <div class="row">
+    	<div class="col col-25">
+    		<form class="list" ng-submit="recuperarJogo()">      
+		        <div class="list list-inset">
+		         	<button class="button button-positive icon ion-ios-football" type="submit"></button>
+		  		</div>
+  			</form>
+    	</div>
+    	<div class="col col-75">
+		    <div class="card" align="center" >
+		    	<h2 class="verde">{{placar}}</h2>
+		    	<div class="padding" >
+			    	<h4>Seleccione seu time:</h4>
+			    	<ion-list>
+					  <ion-radio ng-model="choice" ng-value="'A'" ng-change='jogoSelecionado(choice)'>Local: {{casa}}</ion-radio>
+					  <ion-radio ng-model="choice" ng-value="'B'" ng-change='jogoSelecionado(choice)'>Visitante: {{fora}}</ion-radio>
+					</ion-list>
+					<div ng-class="{'verde':placarFinal=='Vitoria','laranja':placarFinal=='Empate','vermelho':placarFinal=='Derrota'}"><h3>{{placarFinal}}</h3></div>
+				</div>
+		    </div>
+		 </div>
+	</div>
+        <textarea>{{respuesta}}</textarea>
   </ion-content>
 </ion-view>
