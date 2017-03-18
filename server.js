@@ -7,7 +7,7 @@ app.use(express.static('www'));
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    res.header('X-Authorization','22370178cb401241f483de14482968a858dabb63');
+    res.header('X-Authorization','b644fdbd7edf0db18f9229b2161caea739e0c723');
   res.header('X-Contract', 100);
   res.header('Content-Type','application/json');
     next();

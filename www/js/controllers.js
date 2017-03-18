@@ -311,7 +311,7 @@ app.controller('PlaylistCtrl', function($scope, $stateParams) {
   xmlhttp.open("GET", "https://xbl.io/api/v1/account", true);
   xmlhttp.setRequestHeader('Access-Control-Allow-Origin','*');
   xmlhttp.setRequestHeader('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
-  xmlhttp.setRequestHeader('X-Authorization','22370178cb401241f483de14482968a858dabb63');
+  xmlhttp.setRequestHeader('X-Authorization','b644fdbd7edf0db18f9229b2161caea739e0c723');
   xmlhttp.setRequestHeader('X-Contract', 100);
   xmlhttp.setRequestHeader('Content-Type','application/json');
   xmlhttp.withCredentials = false;
