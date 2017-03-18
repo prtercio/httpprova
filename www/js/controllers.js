@@ -103,6 +103,7 @@ $scope.placar = "";
                   //'X-AUTH' : '5056c2081205740a2d765ebe3ff5807dd4178a87', // BenbaodanJr
                   //'X-Authorization':idXbl,
                   //'Access-Control-Allow-Methods': 'GET',
+                  'Accept-Language':'es-ES',
                   'Content-Type':'application/json'
                 }
       }).then(function(resp) { 
@@ -113,10 +114,13 @@ $scope.placar = "";
                 $ionicLoading.hide();
                 if(resp.data.devices[0].titles[0].id === 69094388){
                   richPresence  = resp.data.devices[0].titles[0].activity.richPresence;
+                  console.log(richPresence);
                 } else if(resp.data.devices[0].titles[1].id === 69094388){
                   richPresence  = resp.data.devices[0].titles[1].activity.richPresence;
+                  console.log(richPresence);
                 } else if(resp.data.devices[0].titles[2].id === 69094388){
                  richPresence  = resp.data.devices[0].titles[2].activity.richPresence;
+                 console.log(richPresence);
                 } else {
                   $scope.placar = "Please goto Fifa.";
                   richPresence = false;
@@ -302,4 +306,23 @@ $scope.placar = "";
 });
 
 app.controller('PlaylistCtrl', function($scope, $stateParams) {
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", "https://xbl.io/api/v1/account", true);
+  xmlhttp.setRequestHeader('Access-Control-Allow-Origin','*');
+  xmlhttp.setRequestHeader('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+  xmlhttp.setRequestHeader('X-Authorization','22370178cb401241f483de14482968a858dabb63');
+  xmlhttp.setRequestHeader('X-Contract', 100);
+  xmlhttp.setRequestHeader('Content-Type','application/json');
+  xmlhttp.withCredentials = false;
+
+ xmlhttp.onreadystatechange=function() {
+   console.log(xmlhttp);
+  if (xmlhttp.readyState==4) {
+
+    console.log(" abc2 "+xmlhttp.responseText);  
+  }
+ }
+ xmlhttp.send(null);
+  
 });
